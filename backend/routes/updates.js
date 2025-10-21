@@ -90,7 +90,7 @@ router.put(
   async (req, res) => {
     try {
       const adminKey = req.query.admin;
-      if (adminKey !== "theSuperSecretAdminKey") {
+      if (adminKey !== "theSuperSecretAdminKey") { //major securit risk , instead of hardcoing move the keys to .env file
         return res.status(403).json({ error: "Forbidden" });
       }
 
@@ -156,7 +156,7 @@ router.put(
 router.delete("/updates/:id", async (req, res) => {
   try {
     const adminKey = req.query.admin;
-    if (adminKey !== "theSuperSecretAdminKey") {
+    if (adminKey !== "theSuperSecretAdminKey") { //major securit risk , instead of hardcoing move the keys to .env file
       return res.status(403).json({ error: "Forbidden" });
     }
 

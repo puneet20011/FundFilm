@@ -2,7 +2,7 @@ function Updates() {
   const me = {};
 
   const urlParams = new URLSearchParams(window.location.search);
-  const isAdmin = urlParams.get("admin") === "theSuperSecretAdminKey";
+  const isAdmin = urlParams.get("admin") === "theSuperSecretAdminKey"; //major securit risk , instead of hardcoing move the keys to .env file
 
   me.showError = ({ msg, res, type = "danger" } = {}) => {
     const main = document.querySelector("main");
@@ -20,7 +20,7 @@ function Updates() {
       addButton.className = "btn btn-success mb-3";
       addButton.textContent = "+ Add New Update";
       addButton.onclick = () => {
-        window.location.href = "add-update.html?admin=theSuperSecretAdminKey";
+        window.location.href = "add-update.html?admin=theSuperSecretAdminKey"; //major securit risk , instead of hardcoing move the keys to .env file
       };
 
       const updatesDiv = document.getElementById("updates");
@@ -35,7 +35,7 @@ function Updates() {
 
     try {
       const res = await fetch(
-        `/api/updates/${id}?admin=theSuperSecretAdminKey`,
+        `/api/updates/${id}?admin=theSuperSecretAdminKey`, //major securit risk , instead of hardcoing move the keys to .env file
         {
           method: "DELETE",
         },
@@ -90,14 +90,14 @@ function Updates() {
                       <button
                       type="button"
                       class="btn btn-warning ms-2"
-                      onclick="window.location.href='add-update.html?admin=theSuperSecretAdminKey&edit=${update._id}'"
+                      onclick="window.location.href='add-update.html?admin=theSuperSecretAdminKey&edit=${update._id}'" 
                     >Edit</button>
                     <button
                       type="button"
                       class="btn btn-danger ms-2"
                       onclick="myUpdates.deleteUpdate('${update._id}')"
                       >Delete</button>`
-                      : ""
+                      : "" //major securit risk , instead of hardcoing move the keys to .env file
                   }
                   
                     </div>

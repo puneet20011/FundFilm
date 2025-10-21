@@ -62,7 +62,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
     const url = isEditing
-      ? `/api/updates/${editId}?admin=theSuperSecretAdminKey`
+      ? `/api/updates/${editId}?admin=theSuperSecretAdminKey` //major securit risk , instead of hardcoing move the keys to .env file
       : "/api/updates";
 
     const method = isEditing ? "PUT" : "POST";
@@ -87,7 +87,7 @@ form.addEventListener("submit", async (e) => {
 
       // Redirect back to updates page after 2 seconds
       setTimeout(() => {
-        window.location.href = "index.html?admin=theSuperSecretAdminKey";
+        window.location.href = "index.html?admin=theSuperSecretAdminKey"; //major securit risk , instead of hardcoing move the keys to .env file
       }, 2000);
     } else {
       message.textContent = result.error || "Failed to submit update";
