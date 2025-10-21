@@ -1,15 +1,7 @@
+//this file has dead code inside, remove the commented code before merging. 
 import { MongoClient } from "mongodb";
-//import dotenv from "dotenv";
-
-//console.log("Before dotenv.config()");
-//dotenv.config();
-//console.log("After dotenv.config()");
 
 const MONGODB_URI = process.env.MONGODB_URI;
-//console.log("MONGO_URI:", uri);
-//console.log("Is MONGO_URI defined?", !!uri);
-//const DB_NAME = "FundFilmDB";
-//const COLLECTION_NAME = "updateData";
 
 const client = new MongoClient(MONGODB_URI);
 

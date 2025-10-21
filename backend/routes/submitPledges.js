@@ -1,3 +1,4 @@
+//dead code inside, remove before merging.
 import express from "express";
 import MyDB from "../db/MyMongoDB.js";
 
@@ -18,14 +19,5 @@ router.post("/pledges", (req, res) => {
   );
   console.log("Added new pledge");
   res.redirect("/");
-  /*
-    try{
-        const succeed = MyDB.addPledge(name, email, pledge, comment); 
-    }  catch (err) {
-        console.log("Error adding entry");
-        throw err; 
-    }
-        */
-  // Send success response (?)
 });
 export default router;
