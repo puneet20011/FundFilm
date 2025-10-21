@@ -10,6 +10,6 @@ router.post("/edit", async (req, res) => {
     res.redirect("/admin.html");
   } else {
     console.log("Incorrect password");
-  }
+  } //no response sent for incorrect password, request will hang indefinitely
 });
 export default router;
