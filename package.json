@@ -5,7 +5,7 @@
   "main": "backend-margaret.js",
   "type": "module",
   "scripts": {
-    "start": "node ./node_modules/nodemon/bin/nodemon.js ../backend/backend-margaret.js",
+    "start": "node ./node_modules/nodemon/bin/nodemon.js ../backend/backend-margaret.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/mm-bertoni/FundFilm/issues"
   },
-  "homepage": "https://github.com/mm-bertoni/FundFilm#readme",
+  "homepage": "https://github.com/mm-bertoni/FundFilm#readme", 
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "eslint": "^9.37.0",
@@ -28,10 +28,11 @@
     "jest": "^30.2.0",
     "prettier": "^3.6.2"
   },
-  "dependencies": {
+  "dependencies": {   //add dotenv to dependencies
     "express": "^5.1.0",
     "mongodb": "6.20",
     "multer": "^2.0.2",
     "nodemon": "^3.1.10"
   }
 }
+
