@@ -6,6 +6,7 @@ const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
 router.post("/edit", async (req, res) => {
   if (req.body.password == 123) { //major securit risk , instead of hardcoing move this to .env file
+    // use === instead of == for strict comparison
     console.log("Successful password!");
     res.redirect("/admin.html");
   } else {
