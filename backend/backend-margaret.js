@@ -1,4 +1,5 @@
 //The Start script in package.json runs backend.js but the actual file is backend-margaret.js. Fixed package.json
+//author's name in the file name is not recommended. 
 import express from "express";
 import {connectDB} from "./db/db.js"; // Addding from utkarsh's
 
